@@ -10,17 +10,17 @@ def translate(word):
         return data[word]
 
     elif lnth > 0:
-        print("Did you mean %s?"%get_close_matches(word,data.keys())[0],)
-        word = input("Enter yes/no: ")
+        print("Did you mean %s?"%get_close_matches(word,data.keys())[0])
+        word = raw_input("Enter yes/no: ")
         if(word=='yes'):
             print(translate(word))
         elif(word=='no'):
-            word = input("Enter word: ")
+            word = raw_input("Enter word: ")
             print(translate(word))
 
     else:
         return 'Please check the spelling'
-word = input("Enter word: ")
+word = raw_input("Enter word: ")
 print(translate(word))
 
 
