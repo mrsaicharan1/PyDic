@@ -36,6 +36,14 @@ def antonym(word):
 		word = raw_input("Re-enter the word with the correct spelling: ")
 		antonym(word)
 	
+def program_loop():
+	word = raw_input("Enter word: ")
+	choice = raw_input("Type A if you want to find the antonym or S if you want to find the synonym: ")
+	if(choice=='A'):
+		antonym = antonym(word)
+	elif(choice=='S'):
+		synonym = synonym(word)
+		print synonym
 
 if(__name__=='__main__'):
 	word = raw_input("Enter word: ")
