@@ -4,6 +4,15 @@ from PyDictionary import PyDictionary
 
 
 data = json.load(open("data.json"))
+
+#Function to display the initial message for the user
+def display_initial_message():
+    print "//////////////////////////////////////////////////////"
+    print  "//   Welcome To PyDic, a python based dictionary.   //"
+    print "//////////////////////////////////////////////////////"
+    print "\n\n1. To search a word, just type in at the prompt.\n2. If the word is not found, similar words will be displayed.\n3. To quit, type in quit().\n4. To display this message again, type in message().\n"
+
+
 def synonym(word):
     word = word.lower()
     lnth = len(get_close_matches(word, data.keys()))
@@ -36,20 +45,19 @@ def antonym(word):
 		word = raw_input("Re-enter the word with the correct spelling: ")
 		antonym(word)
 	
-def program_loop():
-	word = raw_input("Enter word: ")
-	choice = raw_input("Type A if you want to find the antonym or S if you want to find the synonym: ")
-	if(choice=='A'):
-		antonym = antonym(word)
-	elif(choice=='S'):
-		synonym = synonym(word)
-		print synonym
 
 if(__name__=='__main__'):
-	word = raw_input("Enter word: ")
-	choice = raw_input("Type A if you want to find the antonym or S if you want to find the synonym: ")
-	if(choice=='A'):
-		antonym = antonym(word)
-	elif(choice=='S'):
-		synonym = synonym(word)
-		print synonym
+	display_initial_message()
+	while True:
+		word = raw_input("Enter word: ")
+		if word == "quit()":
+			quit()
+		elif word == "message()":
+			display_initial_message()
+		else:
+			choice = raw_input("Type A if you want to find the antonym or S if you want to find the synonym: ")
+			if(choice=='A'):
+				antonym = antonym(word)
+			elif(choice=='S'):
+				synonym = synonym(word)
+				print synonym
