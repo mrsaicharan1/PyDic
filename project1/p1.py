@@ -10,7 +10,7 @@ def display_initial_message():
     print "//////////////////////////////////////////////////////"
     print  "//   Welcome To PyDic, a python based dictionary.   //"
     print "//////////////////////////////////////////////////////"
-    print "\n\n1. To search a word, just type in at the prompt.\n2. If the word is not found, similar words will be displayed.\n3. To quit, type in quit().\n4. To display this message again, type in message().\n"
+    print "\n\n1. To search a word, just type in at the prompt.\n2. You can choose to view the Synonymns and the Antonymns of the word.\n3. To quit, type quit().\n4. To display this message again, type message().\n"
 
 
 def synonym(word):
@@ -49,7 +49,7 @@ def antonym(word):
 if(__name__=='__main__'):
 	display_initial_message()
 	while True:
-		word = raw_input("Enter word: ")
+		word = raw_input("\nEnter word: ")
 		if word == "quit()":
 			quit()
 		elif word == "message()":
