@@ -5,18 +5,18 @@ A python app which uses the CLI to query the definitions of a word in a dictiona
 # How to Run locally
 
 * Install latest version of Python
-* run `https://github.com/mrsaicharan1/PyDic.git`
-* Enter into project1 folder of cloned repository
-* run `python p1` (Linux users should make the script executable first)
-* query definitions of words in the popped up interactive CLI
+* run `https://github.com/mrsaicharan1/PyDic.git` command in your terminal
+* Enter into `project1` folder of cloned repository
+* run `python p1` command (Linux users should make the script executable first)
+* now you can query definition of words in the popped up CLI
 
 # How it works
 
-* User queries the definition of words 
-* if the word exists in database, it's meaning is print
-* otherwise it searches for the close match of the queried word
-* if close match is the required word, it prints it's meaning
-* if the word doesn't exists in the database, it prints the appropriate message
+* User queries the definition of word in CLI
+* word's meaning is displayed if it exists in database 
+* otherwise it searches for the closest match of the queried word
+* if closest match found by program is the required word, it prints word's meaning
+* appropriate message is displayed if the required word doesn't exists in database
 
 # Features :
 
