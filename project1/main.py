@@ -1,4 +1,5 @@
 import json
+import sys
 from difflib import get_close_matches
 from PyDictionary import PyDictionary
 
@@ -55,9 +56,11 @@ if(__name__=='__main__'):
 		elif word == "message()":
 			display_initial_message()
 		else:
-			choice = raw_input("Type A if you want to find the antonym or S if you want to find the synonym: ")
-			if(choice=='A'):
+			choice = raw_input("\nType\n\tA : find antonym\n\tS : find the synonym\n\tQ : Quit\n\tChoice = ")
+			if(choice=='A' or choice=='a'):
 				antonym = antonym(word)
-			elif(choice=='S'):
+			elif(choice=='S' or choice=='s'):
 				synonym = synonym(word)
 				print synonym
+			elif(choice=='Q' or choice=='q'):
+				sys.exit()
