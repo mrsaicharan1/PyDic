@@ -10,7 +10,7 @@ then
 	echo "Automatically ran the code for you for the first time, but from next time, make sure to enter \"python -W ignore main.py\" to run the code!"
 	echo "---------------------------------------------------------------"
 	cd ..
-	cd app
+	cd project1
 	python -W ignore main.py
 
 else
@@ -28,7 +28,7 @@ else
 	echo "Automatically ran the code for you for the first time, but from next time, make sure to enter \"python -W ignore main.py\" to run the code!"
 	echo "---------------------------------------------------------------"
 	cd ..
-	cd app
+	cd project1
 	python -W ignore main.py
 	
 fi
