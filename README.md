@@ -1,6 +1,6 @@
 # PyDic
 
-A python app which uses the CLI to query the definitions of a word in a dictionary.
+A smart application which uses voice recognition technology to find out information about a certain word. 
 
 # How to Run locally
 
