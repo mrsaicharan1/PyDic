@@ -23,3 +23,9 @@ A python app which uses the CLI to query the definitions of a word in a dictiona
 * Smart exceptions which suggests few words if the CLI didn't understand your input
 * JSON dataset containing dictionary of words and meanings
 
+# Features developed during OpenCode '18:
+*Voice recognition capabilities
+*GUI interfacing
+*Explicit definitons and information about the word including sentence usage,antonyms,origin etc.
+
+
