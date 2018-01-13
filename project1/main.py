@@ -48,7 +48,7 @@ def antonym(word):
 
 		print("The antonym(s) of the word %s are:"%word)
 
-		textToSpeech("The antonyms of the word that you entered are")
+		textToSpeech("The antonyms of the word that you entered are:")
 
 		antonym = []
 
@@ -95,7 +95,20 @@ if(__name__=='__main__'):
 			elif(choice=='S' or choice=='s'):
 
 				synonym = dictionary.meaning(word)
-				print synonym 
+				
+				synonym_list = synonym.values()
+				
+				synonym_list = synonym_list[0]
+				
+				print ("The synonym(s) of the word %s are:\n"%word)
+				
+				textToSpeech("The synonyms of the word that you entered are")
+				
+				for i in range(0,len(synonym_list)):
+					
+					print (str(i+1)+')'+synonym_list[i])
+					
+					textToSpeech(synonym_list[i])
 			
 			elif(choice=='Q' or choice=='q'):
 
