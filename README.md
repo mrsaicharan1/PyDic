@@ -23,9 +23,9 @@ A smart application which uses voice recognition technology to find out informat
 * Smart exceptions which suggests few words if the CLI didn't understand your input
 * JSON dataset containing dictionary of words and meanings
 
-# Features developed during OpenCode '18:
-*Voice recognition capabilities
-*GUI interfacing
-*Explicit definitons and information about the word including sentence usage,antonyms,origin etc.
+# Features being developed during OpenCode '18:
+* Voice recognition capabilities
+* GUI interfacing
+* Explicit definitons and information about the word including sentence usage,antonyms,origin etc.
 
 
