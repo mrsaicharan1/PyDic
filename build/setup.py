@@ -10,6 +10,9 @@ setup(
 		'bs4',
 		'BeautifulSoup',
 		'PyDictionary',
+		'os',
+		'difflib',
+		'sys',
 	],
 	entry_points={
 		'console_scripts':[
