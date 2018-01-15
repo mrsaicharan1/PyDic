@@ -6,7 +6,7 @@ from difflib import get_close_matches
 
 from PyDictionary import PyDictionary
 
-
+import os
 
 
 dictionary=PyDictionary()
@@ -28,7 +28,10 @@ def display_initial_message():
 
 
 
-
+def textToSpeech(word):
+	command = "espeak "
+	command += "\'"+word+"\'"
+	os.system(command)
 
 
 
@@ -45,16 +48,20 @@ def antonym(word):
 
 		print("The antonym(s) of the word %s are:"%word)
 
-		for i in range(0,len(anto_list)):
+		textToSpeech("The antonyms of the word that you entered are:")
 
+		antonym = []
+
+		for i in range(0,len(anto_list)):
+			antonym += [anto_list[i].encode('ascii')]
 			print (str(i+1)+')'+anto_list[i].encode('ascii'))
-			return 'These are the antonyms'
+			textToSpeech(antonym[i])
 
 	except TypeError:
 
-		word = raw_input("Re-enter the word with the correct spelling: ")
+		word_new = raw_input("Re-enter the word with the correct spelling: ")
 
-		antonym(word)
+		antonym(word_new)
 
 	
 
@@ -82,13 +89,26 @@ if(__name__=='__main__'):
 
 			if(choice=='A' or choice=='a'):
 
-				antonym = dictionary.antonym(word)
-				print antonym
+				antonym = antonym(word)
+				#print antonym
 
 			elif(choice=='S' or choice=='s'):
 
 				synonym = dictionary.meaning(word)
-				print synonym 
+				
+				synonym_list = synonym.values()
+				
+				synonym_list = synonym_list[0]
+				
+				print ("The synonym(s) of the word %s are:\n"%word)
+				
+				textToSpeech("The synonyms of the word that you entered are")
+				
+				for i in range(0,len(synonym_list)):
+					
+					print (str(i+1)+')'+synonym_list[i])
+					
+					textToSpeech(synonym_list[i])
 			
 			elif(choice=='Q' or choice=='q'):
 
