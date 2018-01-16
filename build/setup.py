@@ -13,6 +13,7 @@ setup(
 		'os',
 		'difflib',
 		'sys',
+		'requests',
 	],
 	entry_points={
 		'console_scripts':[
